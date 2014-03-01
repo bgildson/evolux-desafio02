@@ -1,0 +1,16 @@
+#post{
+	padding: 2.5px 5px ;
+	width: 700px;
+	background: #CCC;
+}
+#post-esq{
+	width: 480px;
+}
+#post-dir{
+	width: 210px;
+	background: #333;
+}
+#post-dir img{
+	width:200;
+	height:150;
+}
