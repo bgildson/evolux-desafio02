@@ -1,57 +1,61 @@
+html, body {
+	height: 100%;
+}
 * {
 	margin: 0;
 	padding: 0;
 	color: #333;
 	list-style: none;
 }
-#top {
+header {
+	height: 40px;
 	background: #333;
 	width: 100%;
 }
-#top h1 {
+header h1 {
 	text-align: center;
 	margin:0 auto;
 	color: #CCC;
 }
-#foot{
+footer{
 	background: #333;
 	color: #CCC;
 	position: absolute;
 	bottom: 0;
-	left: 0;
-	right: 0;
+	width: 100%;
 }
-#foot p{
+footer p{
 	display: table;
 	margin: 0 auto;
 	color: #CCC;
 }
-#conteudo {
-	background: #b1b1b1;
+#menu {
+	margin: 0 auto;
 	width: 800px;
-	margin:0 auto;
-	height: 100%;
+	background: #333;
+	display: table;
 }
-#conteudo ul li{
+#menu ul {
+	margin-right: 30px;
+}
+#menu li a {
+	padding: 10px 20px;
 	float: left;
-	padding:5px 20px;
-}
-#conteudo nav a{
+	background: #333;
+	color:#CCC;
 	text-decoration: none;
 }
-#conteudo nav a:hover{
-	color: #777;
-	text-decoration: underline;
+#menu li a:hover {
+	background: #EEE;
+	color:#333;
 }
-#conteudo nav a:visited{
-	color: #666;
+#conteudo {
+	width: 800px;
+	background: #EEE;
+	margin: 0 auto;
+	clear: both;
+	min-height: 500px;
 }
-img {
-	width: 200px;
-	height: 150px;
-}
-
-
 
 
 

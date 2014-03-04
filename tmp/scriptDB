@@ -1,0 +1,8 @@
+CREATE TABLE cad_bares (codigo INTEGER PRIMARY KEY AUTOINCREMENT ,
+		    nome_bar TEXT(60),
+		    descricao TEXT(100),
+		    endereco TEXT(90),
+		    horario_funcionamento TEXT(20),
+		    telefone TEXT(50),
+		    especialidade TEXT(60),
+		    foto BLOB);
