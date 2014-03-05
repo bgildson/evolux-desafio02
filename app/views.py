@@ -1,16 +1,17 @@
 from flask import Flask, render_template
-
-app = Flask(__name__)
+from app import app
+from forms import CadastroBarForm
 
 @app.route('/')
-@app.route('/home')
 @app.route('/index')
+@app.route('/home')
 def home():
 	return render_template('index.html')
 
 @app.route('/cadastro')
 def cadastro():
-	return render_template('cadastro.html')
+	form = CadastroBarForm()
+	return render_template('cadastro.html', form=form)
 
 @app.route('/consulta')
 def consulta():

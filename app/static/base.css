@@ -50,13 +50,16 @@ footer p{
 	color:#333;
 }
 #conteudo {
-	width: 800px;
+	width: 760px;
 	background: #EEE;
 	margin: 0 auto;
-	clear: both;
-	min-height: 500px;
+	min-height: 460px;
+	padding:20px;
 }
-
+.atual-item-menu {
+	background: #EEE;
+	color: #333;
+}
 
 
 

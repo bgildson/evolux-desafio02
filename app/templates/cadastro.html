@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% block conteudo %}
+
+	<h2>Cadastre o seu bar aqui!</h2>
+	<hr />
+	
+	<form action='{{ url_for("cadastro") }}' method='POST'>
+		{{ form.hidden_tag() }}
+		<table>
+			<tr>
+				<td>Nome do Bar</td>
+				<td>{{ form.nome }}</td>
+			</tr>
+			<tr>
+				<td>Descrição</td>
+				<td>{{ form.descricao }}</td>
+			</tr>
+			<tr>
+				<td>Endereço</td>
+				<td>{{ form.endereco }}</td>
+			</tr>
+			<tr>
+				<td>Telefone</td>
+				<td>{{ form.telefone }}</td>
+			</tr>
+			<tr>
+				<td>Especialidade</td>
+				<td>{{ form.especialidade }}</td>
+			</tr>
+			<tr>
+				<td colspan='2'>
+					<input type='submit' value='Cadastrar'>
+				</td>
+			</tr>
+		</table>
+	</form>
+
+
+{% endblock %}

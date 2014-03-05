@@ -9,24 +9,23 @@
 		<link rel='stylesheet' href='../static/cadastro.css' type='text/css' />
 	</head>
 	<body>
-		
 		<header>
 			<h1>FindBAR</h1>
 		</header>
 
-		<div id='menu'>
+		<nav id='menu'>
 			<ul>
 				<li><a href='{{ url_for("home") }}'>Home</a></li>
 				<li><a href='{{ url_for("cadastro") }}'>Cadastro</a></li>
 				<li><a href='{{ url_for("consulta") }}'>Consulta</a></li>
 			</ul>
-		</div>
+		</nav>
 		
-		<div id='conteudo'>
+		<section id='conteudo'>
 			
 			{% block conteudo %} {% endblock %}
 
-		</div>
+		</section>
 
 		<footer>
 			<p> &copy Copyright 2014 - FindBAR</p>
