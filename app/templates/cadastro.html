@@ -6,26 +6,41 @@
 	
 	<form action='{{ url_for("cadastro") }}' method='POST'>
 		{{ form.hidden_tag() }}
-		<table>
+		<table id='form_cadastro_bar'>
 			<tr>
 				<td>Nome do Bar</td>
-				<td>{{ form.nome }}</td>
+				<td>{{ form.nome(class='campo_formulario') }}
+				{% for error in form.errors.nome %}
+        			<span style="color: red;">[{{error}}]</span>
+        			{% endfor %}</td>
 			</tr>
 			<tr>
 				<td>Descrição</td>
-				<td>{{ form.descricao }}</td>
+				<td>{{ form.descricao(class='campo_formulario') }}
+				{% for error in form.errors.descricao %}
+        			<span style="color: red;">[{{error}}]</span>
+        			{% endfor %}</td>
 			</tr>
 			<tr>
 				<td>Endereço</td>
-				<td>{{ form.endereco }}</td>
+				<td>{{ form.endereco(class='campo_formulario') }}
+				{% for error in form.errors.endereco %}
+        			<span style="color: red;">[{{error}}]</span>
+        			{% endfor %}</td>
 			</tr>
 			<tr>
 				<td>Telefone</td>
-				<td>{{ form.telefone }}</td>
+				<td>{{ form.telefone(class='campo_formulario') }}
+				{% for error in form.errors.telefone %}
+        			<span style="color: red;">[{{error}}]</span>
+        			{% endfor %}</td>
 			</tr>
 			<tr>
 				<td>Especialidade</td>
-				<td>{{ form.especialidade }}</td>
+				<td>{{ form.especialidade(class='campo_formulario') }}
+				{% for error in form.errors.especialidade %}
+        			<span style="color: red;">[{{error}}]</span>
+        			{% endfor %}</td>
 			</tr>
 			<tr>
 				<td colspan='2'>
