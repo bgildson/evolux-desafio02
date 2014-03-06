@@ -1,0 +1,16 @@
+#resultado{
+	padding: 2.5px 5px ;
+	width: 760px;
+	background: #DDD;
+}
+#resultado-esq{
+	width: 540px;
+}
+#resultado-dir{
+	width: 210px;
+	background: #333;
+}
+#resultado-dir img{
+	width:200;
+	height:150;
+}

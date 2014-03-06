@@ -1,0 +1,23 @@
+{% extends 'consulta.html' %}
+
+{% block conteudo %}
+	<li>
+	<table id='resultado'>
+		<tr>
+			<td id='resultado-esq'>
+				<ul>
+					<li><a href='#'><h3>{{resultado.nome}}</h3></a></li>
+					<li>Descrição: {{resultado.descricao}} </li>
+					<li>Endereço: {{resultado.endereco}} </li>
+					<li>Telefone: {{resultado.telefone}}</li>
+					<li>Especialidade: {{resultado.especialidade}}</li>
+				</ul>
+			</td>
+			<td id='resultado-dir'>
+				<img src='' />
+			</td>
+		</tr>
+	</table>
+</li>
+
+{% endblock %}

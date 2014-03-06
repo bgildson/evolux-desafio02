@@ -4,11 +4,11 @@
 	<h2>Cadastre o seu bar aqui!</h2>
 	<hr />
 	
-	<form action='{{ url_for("cadastro") }}' method='POST'>
+	<form action='{{ url_for("cadastro") }}' method='POST' enctype='multipart/form-data'>
 		{{ form.hidden_tag() }}
 		<table id='form_cadastro_bar'>
 			<tr>
-				<td>Nome do Bar</td>
+				<td>Nome</td>
 				<td>{{ form.nome(class='campo_formulario') }}
 				{% for error in form.errors.nome %}
         			<span style="color: red;">[{{error}}]</span>
@@ -41,6 +41,10 @@
 				{% for error in form.errors.especialidade %}
         			<span style="color: red;">[{{error}}]</span>
         			{% endfor %}</td>
+			</tr>
+			<tr>
+				<td>Foto</td>
+				<td>{{ form.upload(class='campo_formulario') }}</td>
 			</tr>
 			<tr>
 				<td colspan='2'>
