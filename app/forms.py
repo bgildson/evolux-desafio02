@@ -16,4 +16,4 @@ class CadastroBarForm(Form):
 	upload = FileField('image', validators=[FileAllowed(images, 'Somente imagens!')])
 
 class ConsultaForm(Form):
-	consulta = TextField('consulta', validators=[Required(req)])
+	consulta = TextField('consulta', validators=[req])

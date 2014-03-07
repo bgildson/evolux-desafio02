@@ -3,6 +3,7 @@
 
 	<div id='tab-consulta'>
 		<form action='{{ url_for("consulta") }}' method='POST'>
+			{{ form.hidden_tag() }}
 			{{ form.consulta }}
 			<input type='submit' value='Consultar' />
 		</form>
