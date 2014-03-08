@@ -1,5 +1,8 @@
 {% extends 'base.html' %}
 
 {% block conteudo %}
-	implementar pagina inicial
+	{% for message in get_flashed_messages() %}
+        	<div class="flash">{{ message }}</div>
+        <br/>
+    {% endfor %}
 {% endblock %}

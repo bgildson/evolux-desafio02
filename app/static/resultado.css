@@ -1,5 +1,5 @@
 #resultado{
-	padding: 2.5px 5px ;
+	padding: 5px 5px 5px 20px;
 	width: 760px;
 	background: #DDD;
 }
@@ -11,6 +11,8 @@
 	background: #333;
 }
 #resultado-dir img{
-	width:200;
-	height:150;
+	vspace:200px;
+	width:200 px;
+	height:150 px;
+	display: table;
 }

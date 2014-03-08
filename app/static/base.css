@@ -1,5 +1,6 @@
 html, body {
 	height: 100%;
+	clear:both;
 }
 * {
 	margin: 0;
@@ -15,18 +16,6 @@ header {
 header h1 {
 	text-align: center;
 	margin:0 auto;
-	color: #CCC;
-}
-footer{
-	background: #333;
-	color: #CCC;
-	position: absolute;
-	bottom: 0;
-	width: 100%;
-}
-footer p{
-	display: table;
-	margin: 0 auto;
 	color: #CCC;
 }
 #menu {
@@ -53,14 +42,29 @@ footer p{
 	width: 760px;
 	background: #EEE;
 	margin: 0 auto;
-	min-height: 460px;
+	min-height: 500px;
 	padding:20px;
+	position: relative;
 }
 .atual-item-menu {
 	background: #EEE;
 	color: #333;
 }
-
+footer{
+	background: #333;
+	color: #CCC;
+	position: relative;
+	bottom: 0;
+	width: 100%;
+}
+footer p{
+	display: table;
+	margin: 0 auto;
+	color: #CCC;
+}
+.flash{
+	color: red;
+}
 
 
 

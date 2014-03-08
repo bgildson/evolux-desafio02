@@ -1,23 +1,22 @@
-{% extends 'consulta.html' %}
-
-{% block conteudo %}
+{% block resultado %}
+	<li><br /></li>
 	<li>
-	<table id='resultado'>
-		<tr>
-			<td id='resultado-esq'>
-				<ul>
-					<li><a href='#'><h3>{{resultado.nome}}</h3></a></li>
-					<li>Descrição: {{resultado.descricao}} </li>
-					<li>Endereço: {{resultado.endereco}} </li>
-					<li>Telefone: {{resultado.telefone}}</li>
-					<li>Especialidade: {{resultado.especialidade}}</li>
-				</ul>
-			</td>
-			<td id='resultado-dir'>
-				<img src='' />
-			</td>
-		</tr>
-	</table>
-</li>
+		<table id='resultado'>
+			<tr>
+				<td id='resultado-esq'>
+					<ul>
+						<li><a href='{{ url_for("editar", id=resultado.id) }}'><h3>{{resultado.nome}}</h3></a></li>
+						<li>Descrição: {{resultado.descricao}} </li>
+						<li>Endereço: {{resultado.endereco}} </li>
+						<li>Telefone: {{resultado.telefone}}</li>
+						<li>Especialidade: {{resultado.especialidade}}</li>
+					</ul>
+				</td>
+				<td id='resultado-dir'>
+					<img src='{{ resultado.foto }}' alt='foto do bar' />
+				</td>
+			</tr>
+		</table>
+	</li>
 
 {% endblock %}

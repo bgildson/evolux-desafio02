@@ -8,12 +8,14 @@ images = UploadSet('images', IMAGES)
 req = Required('Campo Requerido') # generaliza msgs de campo requerido
 
 class CadastroBarForm(Form):
+	id = TextField('id')
 	nome = TextField('nome', validators=[req])
 	descricao = TextField('descricao', validators=[req])
 	endereco = TextField('endereco', validators=[req])
 	telefone = TextField('telefone', validators=[req])
 	especialidade = TextField('especialidade', validators=[req])
-	upload = FileField('image', validators=[FileAllowed(images, 'Somente imagens!')])
+	foto = FileField('foto', validators=[FileAllowed(['jpg', 'png'], 'Somente imagens!')])
+	#foto = TextField('foto', validators=[req])
 
 class ConsultaForm(Form):
 	consulta = TextField('consulta', validators=[req])
