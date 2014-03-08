@@ -1,3 +1,4 @@
+# -*- coding: cp1252 -*-
 from flask.ext.wtf import Form
 from wtforms import TextField
 from wtforms.validators import Required
@@ -5,7 +6,7 @@ from flask.ext.uploads import UploadSet, IMAGES
 from flask_wtf.file import FileField, FileAllowed, FileRequired
 
 images = UploadSet('images', IMAGES)
-req = Required('Campo Requerido') # generaliza msgs de campo requerido
+req = Required('Campo Necessário') # generaliza msgs de campo requerido
 
 class CadastroBarForm(Form):
 	id = TextField('id')
@@ -14,8 +15,7 @@ class CadastroBarForm(Form):
 	endereco = TextField('endereco', validators=[req])
 	telefone = TextField('telefone', validators=[req])
 	especialidade = TextField('especialidade', validators=[req])
-	foto = FileField('foto', validators=[FileAllowed(['jpg', 'png'], 'Somente imagens!')])
-	#foto = TextField('foto', validators=[req])
+	foto = FileField('foto', validators=[FileAllowed(['jpg', 'png'], 'Somente imagens! (JPG, PNG)')])
 
 class ConsultaForm(Form):
 	consulta = TextField('consulta', validators=[req])

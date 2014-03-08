@@ -1,0 +1,8 @@
+$ cat .gitignore
+
+tmp
+migrations
+*~
+*.pyc
+*.db
+app/static/upload/*

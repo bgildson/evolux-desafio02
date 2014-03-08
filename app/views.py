@@ -21,7 +21,9 @@ def home():
 @app.route('/cadastro', methods=['GET', 'POST'])
 def cadastro():
 	form = CadastroBarForm()
+	print 'ok'
 	if form.validate_on_submit() and request.method == 'POST':
+		print 'DEU CERTO!'
 		filename = ''
 		if form.foto.data:
 			foto = form.foto.data
@@ -30,11 +32,11 @@ def cadastro():
 				filename = str(int(bar.last().id) + 1) + '.' + get_extension(filename)
 			else:
 				filename = '1.' + get_extension(filename)
-			foto.save(app.config['FOTO_URI_FROM_PATH'] + filename)
+			foto.save(app.config['UPLOAD_FROM_PATH'] + filename)
 			foto.close()
 		else:
-			filename = app.config['FOTO_PADRAO_BAR']
-		bar.cadastra_bar(form.nome.data, form.descricao.data, form.endereco.data, form.telefone.data, form.especialidade.data, app.config['FOTO_URI_FROM_TEMPLATES'] + filename)
+			filename = app.config['FOTO_PADRAO']
+		bar.cadastra_bar(form.nome.data, form.descricao.data, form.endereco.data, form.telefone.data, form.especialidade.data, app.config['UPLOAD_FROM_TEMPLATES'] + filename)
 		flash('Bar, %s, cadastrado com sucesso!' % form.nome.data)
 		form = CadastroBarForm()
 	return render_template('cadastro.html', title='Cadastro', form=form)
@@ -51,23 +53,36 @@ def consulta():
 
 @app.route('/editar/<int:id>', methods=['GET', 'POST'])
 def editar(id):
-	print id
 	form = CadastroBarForm()
 	result = bar.consulta_bar_por_id(id)
-	print 'ok1'
 	if result:
-		print 'ok2'
 		form.id.data = result.id
+		print 'AQUI: ' + str(form.id.data)
 		form.nome.data = result.nome
 		form.descricao.data = result.descricao
 		form.endereco.data = result.endereco
 		form.telefone.data = result.telefone
 		form.especialidade.data = result.especialidade
-		print 'ok3'
 		foto = result.foto
-		print 'ok4'
-		return render_template('index.html', title='Editar', form=form, foto=foto)
-	return redirect( url_for('home') )
+		return render_template('editar.html', title='Editar', form=form)
+	return redirect( url_for('home'), message='Usuário com ID ' + id + ' não encontrado.')
+
+@app.route('/salvar_edicao/<id>', methods=['GET', 'POST'])
+def salvar_edicao(id):
+	form = CadastroBarForm()
+	result = bar.consulta_bar_por_id(id)
+	import pdb; pdb.set_trace()
+	if form.validate_on_submit() and result:
+		form.id.data = result.id
+		result.id
+		result.nome = form.nome.data
+		result.descricao = form.descricao.data
+		result.endereco = form.endereco.data
+		result.telefone = form.telefone.data
+		result.especialidade = form.especialidade.data
+		bar.alterar_bar_por_id(result)
+
+	return render_template('editar.html', title='Editar', form=form)
 	
 @app.route('/remover/<int:id>', methods=['GET', 'POST'])
 def remover(id):

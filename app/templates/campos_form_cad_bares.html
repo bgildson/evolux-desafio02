@@ -46,6 +46,8 @@
 </tr>
 <tr>
 	<td>Foto</td>
-	<td>{% if foto %}<img src='{{ foto }}' class='campo_formulario' alt='Foto atual' /> {% endif %}{{ form.foto(class='campo_formulario') }}</td>
+	<td>{% if foto %}<img src='{{ foto }}' class='campo_formulario' alt='Foto atual' /> {% endif %}{{ form.foto(class='campo_formulario') }}{% for error in form.errors.foto %}
+		<span style="color: red;">[{{error}}]</span>
+		{% endfor %}</td></td>
 </tr>
 {% endblock %}
