@@ -11,8 +11,8 @@
 	background: #333;
 }
 #resultado-dir img{
-	vspace:200px;
-	width:200 px;
-	height:150 px;
+	vspace: 100%;
+	width:210px;
+	min-height: 150px;
 	display: table;
 }

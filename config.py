@@ -11,6 +11,6 @@ basedir = os.path.abspath(os.path.dirname(__file__))
 SQLALCHEMY_DATABASE_NAME = 'app'
 SQLALCHEMY_DATABASE_URI = 'sqlite:///' + os.path.join(basedir, 'app/app.db')
 
-UPLOAD_FROM_PATH = 'app/static/upload/'
-UPLOAD_FROM_TEMPLATES = '../static/upload/'
-FOTO_PADRAO = '../static/0.jpg'
+UPLOAD_FROM_PATH = os.path.join('app', 'static', 'upload')
+UPLOAD_FROM_TEMPLATES = os.path.join('..', 'static', 'upload')
+FOTO_PADRAO = os.path.join('..', 'static', '0.jpg')

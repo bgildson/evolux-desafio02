@@ -11,7 +11,7 @@
 			<tr>
 				<td colspan='2'>
 					<input type='submit' value='Salvar' />
-					<input type='button' value='Remover' onclick="location.href='{{ url_for('editar', id=form.id.data) }}'" />
+					<input type='button' value='Remover' onclick="location.href='{{ url_for('remover', id=form.id.data) }}'" />
 					<input type='button' value='Cancelar' onclick="location.href='{{ url_for('home') }}'" />
 				</td>
 			</tr>
