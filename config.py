@@ -1,3 +1,4 @@
+# -*- coding: cp1252 -*-
 import os
 from os.path import realpath
 

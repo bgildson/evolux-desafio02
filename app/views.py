@@ -39,6 +39,7 @@ def home():
 @app.route('/cadastro', methods=['GET', 'POST'])
 def cadastro():
 	form = CadastroBarForm()
+	import pdb; pdb.set_trace()
 	if form.validate_on_submit() and request.method == 'POST':
 		filename = salvar_foto(foto=form.foto.data)
 		bar.cadastra_bar(form.nome.data, form.descricao.data, form.endereco.data, form.telefone.data, form.especialidade.data, filename)

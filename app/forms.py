@@ -6,7 +6,7 @@ from flask.ext.uploads import UploadSet, IMAGES
 from flask_wtf.file import FileField, FileAllowed, FileRequired
 
 images = UploadSet('images', IMAGES)
-req = Required('Campo Necessário') # generaliza msgs de campo requerido
+req = Required('Campo Necessário'.decode('utf-8')) # generaliza msgs de campo requerido
 
 class CadastroBarForm(Form):
 	id = TextField('id')

@@ -1,3 +1,4 @@
+# -*- coding: cp1252 -*-
 from models import Bar as _Bar
 from app import db
 
