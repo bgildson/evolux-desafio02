@@ -6,8 +6,8 @@
 
 - Instalação do pip
 - Executar o comando: pip install -r requirements.txt
-- Criar o banco de dados executando o script armazenado no arquivo manage.py
-    - python manage.py db init
-    - python manage.py db migrate
-    - python manage.py db upgrade
+- Criar o banco de dados executando o script armazenado no arquivo run.py
+    - python run.py db init
+    - python run.py db migrate
+    - python run.py db upgrade
 - Rodar a aplicação executando o arquivo: run.py

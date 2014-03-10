@@ -1,9 +1,10 @@
 $ cat .gitignore
 
+flask
 tmp
 migrations
 *~
 *.pyc
 *.db
 app/static/upload/*
-!.gitkeep
+!app/static/upload/0.jpg

@@ -13,4 +13,4 @@ SQLALCHEMY_DATABASE_URI = 'sqlite:///' + os.path.join(basedir, 'app/app.db')
 
 UPLOAD_FROM_PATH = os.path.join('app', 'static', 'upload')
 UPLOAD_FROM_TEMPLATES = os.path.join('..', 'static', 'upload')
-FOTO_PADRAO = os.path.join('..', 'static', '0.jpg')
+FOTO_PADRAO = '0.jpg'

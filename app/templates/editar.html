@@ -3,19 +3,22 @@
 
 	<h2>Editando: {{ form.nome.data }}</h2>
 	<hr />
-	
+	<center>
 	<form action='{{ url_for("salvar_edicao", id=form.id.data) }}' method='POST' enctype='multipart/form-data'>
 		{{ form.hidden_tag() }}
 		<table id='form_cadastro_bar'>
 			{% include 'campos_form_cad_bares.html' %}
 			<tr>
 				<td colspan='2'>
+					<center>
 					<input type='submit' value='Salvar' />
 					<input type='button' value='Remover' onclick="location.href='{{ url_for('remover', id=form.id.data) }}'" />
 					<input type='button' value='Cancelar' onclick="location.href='{{ url_for('home') }}'" />
+					</center>
 				</td>
 			</tr>
 		</table>
 	</form>
+	<center>
 
 {% endblock %}

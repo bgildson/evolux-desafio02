@@ -37,7 +37,6 @@ class Bar:
 		return None
 
 	def remover_bar_por_id(self, id):
-		import pdb; pdb.set_trace()
 		rem = self.consulta_bar_por_id(id)
 		if rem:
 			db.session.delete(rem)
